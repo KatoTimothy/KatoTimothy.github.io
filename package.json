@@ -1,0 +1,19 @@
+{
+  "name": "tailwind_lab",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 3000",
+    "build": "vite build",
+    "preview": "vite preview",
+    "tailwind": "npx tailwindcss -i css/tailwind.css -o css/dist/tailwind.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.3",
+    "vite": "^4.4.0"
+  },
+  "dependencies": {
+    "swiper": "^10.1.0"
+  }
+}

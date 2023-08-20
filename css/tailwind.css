@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+@layer components {
+  .page-section {
+    @apply container w-full lg:max-w-screen-lg;
+  }
+
+  /*--------------------*/
+  /*======= SECTION - HERO ======*/
+
+  .hero-section {
+    @apply lg:min-h-screen mb-16 lg:mb-0;
+  }
+  /* hero body styles */
+  .hero-page__content {
+    @apply grid grid-cols-4;
+  }
+
+  .hero-page__body {
+    @apply col-span-full;
+  }
+
+  .hero-page__text {
+    @apply text-5xl md:max-w-[75%] md:text-7xl lg:text-8xl text-center font-sans mt-16 font-medium sm:text-left;
+  }
+
+  .hero-page__button-wrapper {
+    @apply flex justify-center my-24 sm:justify-start;
+  }
+
+  .hero-page__button {
+    @apply text-lg text-black bg-[#FAFF00] w-[12rem] py-[1.75rem] px-[3.29rem] rounded-full font-semibold h-[3rem] flex items-center justify-center;
+  }
+
+  /*--------------------*/
+  /*======= HEADER -SECTION ======*/
+
+  /* lOGO */
+  .header-logo {
+    @apply m-0 p-0;
+  }
+
+  /* NAVIGATION */
+  .header__nav {
+    @apply flex justify-between items-center h-[80px];
+  }
+  .nav-links {
+    @apply text-center;
+  }
+  .nav-link {
+    @apply pl-6;
+  }
+
+  /* Hide nav on medium screen */
+  .header__nav--mobile {
+    @apply md:hidden;
+  }
+  /* show nav for medium screens and larger*/
+  .header__nav--desktop {
+    @apply hidden md:flex;
+  }
+
+  /*======================
+   /*---GYM ADVANTAGES - SECTION---*/
+  .advantages-section {
+    @apply mb-16 w-full;
+  }
+  .advantages-list {
+    @apply grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-x-24 gap-y-8 w-full;
+  }
+  .advantages-list__item {
+    @apply w-full col-span-full md:col-span-4 lg:col-span-6 grid grid-cols-[auto,minmax(0,1fr)] gap-4;
+  }
+  .advantages-text-title {
+    @apply mb-2 font-semibold text-lg;
+  }
+
+  /*======================
+   /*---GYM MEMBERSHIP - SECTION---*/
+  .membership-section {
+    @apply w-full;
+  }
+  .membership-cards {
+    @apply w-full grid grid-cols-[repeat(auto-fit,minmax(16rem,1fr))] gap-3 max-sm:justify-items-center;
+  }
+  .membership-card {
+    @apply max-sm:w-[18rem] h-96 flex flex-col justify-start bg-gray-700 rounded-lg py-6 items-center gap-y-3;
+  }
+
+  .membership-card__text {
+    @apply text-center flex flex-col items-center justify-center w-full;
+  }
+
+  .membership-card__text > * {
+    @apply w-full;
+  }
+
+  .membership-card__title {
+    @apply text-lg font-extrabold;
+  }
+
+  .membership-card__price {
+    @apply font-extrabold pb-3;
+  }
+
+  .membership-card__description-list {
+    @apply grid grid-cols-[auto,1fr] gap-2 px-3;
+  }
+
+  .membership-card__buy-button {
+    @apply flex justify-center p-[0.38rem] bg-[#FAFF00] text-black w-[6.69rem] rounded-full font-semibold justify-self-end mt-auto;
+  }
+  /*======================
+   /*---ABOUT US - SECTION---*/
+  .about-section {
+    @apply mt-24 w-full grid lg:grid-cols-2 gap-12;
+  }
+  .about-section > div {
+    @apply lg:col-span-1;
+  }
+  .about-section__text-wrapper p {
+    @apply max-w-md text-center leading-7 mb-4 lg:text-left mx-auto lg:mx-0;
+  }
+  .about-section__images {
+    @apply grid gap-3;
+  }
+  .about-section__image-card {
+    @apply col-span-full;
+  }
+  .about-section__image {
+    @apply w-full object-cover rounded-lg;
+  }
+  .about-section h1 {
+    @apply text-center lg:text-left mb-12 mt-0;
+  }
+
+  /*======================
+   /*---TRAINERS STAFF - SECTION---*/
+  .trainers-staff {
+    @apply mt-24 w-full mb-9;
+  }
+  .trainers {
+    @apply grid grid-cols-[repeat(auto-fit,minmax(14.125rem,1fr))] gap-4 max-sm:justify-items-center;
+  }
+  .trainers__card {
+    @apply flex flex-col items-center bg-gray-700 p-4 rounded-3xl max-sm:w-[18rem];
+  }
+  .trainers__profile-image {
+    @apply rounded-3xl aspect-auto w-[14.875rem] object-cover;
+  }
+  .trainers__name {
+    @apply font-[500] text-lg my-4 tracking-wide;
+  }
+  .trainers__socials {
+    @apply flex items-center justify-center gap-x-2;
+  }
+
+  /*======================
+   /*---TRAINERS STAFF - SECTION---*/
+  footer {
+    @apply text-[14px] my-16;
+  }
+  .footer__wrapper {
+    @apply grid grid-cols-[repeat(auto-fit,minmax(12rem,1fr))] max-sm:gap-10 gap-12;
+  }
+  .footer__item {
+    @apply flex flex-col gap-4;
+  }
+  .footer__contact > div {
+    @apply flex gap-2 items-center;
+  }
+  .footer__contact {
+    @apply flex flex-col gap-2;
+  }
+  .footer__headings {
+    @apply text-[1.125rem] tracking-wide font-semibold;
+  }
+}
+
+/* utilities */
+@layer utilities {
+  .grid-layout {
+    @apply grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12;
+  }
+  .grid-row {
+    @apply col-span-full;
+  }
+  .flex-layout {
+    @apply flex flex-col flex-nowrap items-center;
+  }
+  .section-titles {
+    @apply font-medium text-3xl text-center mb-8 md:text-[42px] w-full;
+  }
+}

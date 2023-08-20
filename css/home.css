@@ -1,0 +1,10 @@
+:root{
+    --primary-color: #000;
+    --secondary-color:#FAFF00;
+    --white:#FFFFFF;
+    --gray: #222222;
+}
+
+body{
+    /* background-color: #000; */
+}
