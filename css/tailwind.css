@@ -187,6 +187,9 @@
 
 /* utilities */
 @layer utilities {
+  html {
+    @apply scroll-smooth;
+  }
   .grid-layout {
     @apply grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12;
   }
