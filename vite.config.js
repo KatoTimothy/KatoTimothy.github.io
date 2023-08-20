@@ -1,13 +1,7 @@
 import { defineConfig } from "vite";
 
 export default defineConfig(({ command }) => {
-  const config = {
-    base: "/gym24/",
+  return {
+    base: "/",
   };
-
-  if (command !== "serve") {
-    config.base = "/";
-  }
-
-  return config;
 });
