@@ -7,7 +7,7 @@
     "dev": "vite --port 3000",
     "build": "vite build",
     "preview": "vite preview",
-    "tailwind": "npx tailwindcss -i css/tailwind.css -o css/dist/tailwind.css --watch"
+    "tailwind": "npx tailwindcss -i css/tailwind.css -o css/tailwind-out.css --watch"
   },
   "devDependencies": {
     "tailwindcss": "^3.3.3",
