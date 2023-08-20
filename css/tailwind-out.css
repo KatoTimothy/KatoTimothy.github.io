@@ -554,9 +554,9 @@ video {
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 }
 
-.px-10{
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .text-center{
@@ -801,11 +801,10 @@ video {
 
 .advantages-list{
   display: grid;
-  width: 100%;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  -moz-column-gap: 6rem;
-       column-gap: 6rem;
-  row-gap: 2rem;
+  row-gap: 1rem;
+  -moz-column-gap: 2.5rem;
+       column-gap: 2.5rem;
 }
 
 @media (min-width: 768px){
@@ -822,10 +821,9 @@ video {
 
 .advantages-list__item{
   grid-column: 1 / -1;
-  display: grid;
+  display: flex;
   width: 100%;
-  grid-template-columns: auto minmax(0,1fr);
-  gap: 1rem;
+  gap: 0.75rem;
 }
 
 @media (min-width: 768px){
@@ -1107,6 +1105,13 @@ footer{
 }
 
 /* utilities */
+
+@media not all and (min-width: 640px){
+  .max-sm\:px-4{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
 
 @media (min-width: 640px){
   .sm\:max-w-\[600px\]{
