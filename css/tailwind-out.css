@@ -857,13 +857,6 @@ article.advantages-list__item{
   grid-template-columns: auto 1fr;
 }
 
-@media (max-width: 320px){
-  article.advantages-list__item{
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-    gap: 0.5rem;
-  }
-}
-
 .advantages-text-title{
   margin-bottom: 0.5rem;
   font-size: 1.125rem;

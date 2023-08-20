@@ -80,7 +80,7 @@
     @apply w-12;
   }
   article.advantages-list__item {
-    @apply grid max-[320px]:grid-cols-1 grid-cols-[auto,1fr] max-[320px]:gap-2;
+    @apply grid grid-cols-[auto,1fr];
   }
   .advantages-list_text {
     @apply w-full;
