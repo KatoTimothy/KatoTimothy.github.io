@@ -536,17 +536,8 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.w-full{
-  width: 100%;
-}
-
 .max-w-\[278px\]{
   max-width: 278px;
-}
-
-.border-gray-800{
-  --tw-border-opacity: 1;
-  border-color: rgb(31 41 55 / var(--tw-border-opacity));
 }
 
 .bg-gray-800{
@@ -605,7 +596,7 @@ html{
 }
 
 .section-titles{
-  margin-bottom: 2rem;
+  margin-bottom: 3.12rem;
   width: 100%;
   text-align: center;
   font-size: 1.875rem;
@@ -871,26 +862,27 @@ article.advantages-list__item{
   width: 100%;
 }
 
+.membership-cards__wrapper{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
 .membership-cards{
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(auto-fit,minmax(16rem,1fr));
-  gap: 0.75rem;
-}
-
-@media not all and (min-width: 640px){
-  .membership-cards{
-    justify-items: center;
-  }
+  max-width: 56rem;
+  grid-template-columns: repeat(auto-fit,minmax(14.375rem,1fr));
+  gap: 1rem;
 }
 
 .membership-card{
   display: flex;
   height: 24rem;
+  flex-shrink: 0;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  row-gap: 0.75rem;
   border-radius: 0.5rem;
   --tw-bg-opacity: 1;
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
@@ -898,50 +890,48 @@ article.advantages-list__item{
   padding-bottom: 1.5rem;
 }
 
-@media not all and (min-width: 640px){
-  .membership-card{
-    width: 18rem;
-  }
-}
-
-.membership-card__text{
-  display: flex;
+.membership-card__title-text-wrapper{
   width: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   text-align: center;
 }
 
-.membership-card__text > *{
-  width: 100%;
-}
-
-.membership-card__title{
+.membership-card__title-text-heading{
+  margin-bottom: 0.25rem;
   font-size: 1.125rem;
   line-height: 1.75rem;
-  font-weight: 800;
+  font-weight: 700;
+  letter-spacing: 0.025em;
 }
 
-.membership-card__price{
+.membership-card__title-text-price{
   padding-bottom: 0.75rem;
-  font-weight: 800;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 500;
+}
+
+.membership-card__title-text-separator{
+  --tw-border-opacity: 1;
+  border-color: rgb(31 41 55 / var(--tw-border-opacity));
 }
 
 .membership-card__description-list{
-  display: grid;
-  grid-template-columns: auto 1fr;
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.membership-card__description-list-item{
+  margin-bottom: 0.5rem;
+  display: inline-flex;
+  align-items: center;
   gap: 0.5rem;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
+  line-height: 130%;
 }
 
 .membership-card__buy-button{
   margin-top: auto;
-  display: flex;
   width: 6.69rem;
-  justify-content: center;
-  justify-self: end;
   border-radius: 9999px;
   --tw-bg-opacity: 1;
   background-color: rgb(250 255 0 / var(--tw-bg-opacity));
@@ -1027,35 +1017,22 @@ article.advantages-list__item{
 
 .trainers{
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(14.125rem,1fr));
+  grid-template-columns: repeat(auto-fill,minmax(14.325rem,1fr));
   gap: 1rem;
-}
-
-@media not all and (min-width: 640px){
-  .trainers{
-    justify-items: center;
-  }
 }
 
 .trainers__card{
   display: flex;
+  aspect-ratio: auto;
   flex-direction: column;
   align-items: center;
   border-radius: 1.5rem;
   --tw-bg-opacity: 1;
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
-  padding: 1rem;
-}
-
-@media not all and (min-width: 640px){
-  .trainers__card{
-    width: 18rem;
-  }
+  padding: 1.19rem;
 }
 
 .trainers__profile-image{
-  aspect-ratio: auto;
-  width: 14.875rem;
   border-radius: 1.5rem;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1084,12 +1061,19 @@ article.advantages-list__item{
 footer{
   margin-top: 4rem;
   margin-bottom: 4rem;
+  text-align: center;
   font-size: 14px;
 }
 
-.footer__wrapper{
+@media (min-width: 640px){
+  footer{
+    text-align: left;
+  }
+}
+
+.footer__wrapper {
+  /* @apply grid grid-cols-[repeat(auto-fit,minmax(12rem,1fr))] max-sm:gap-10 gap-12; */
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(12rem,1fr));
   gap: 3rem;
 }
 
@@ -1099,14 +1083,33 @@ footer{
   }
 }
 
+@media (min-width: 640px){
+  .footer__wrapper{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px){
+  .footer__wrapper{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 .footer__item{
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
 }
 
+@media (min-width: 640px){
+  .footer__item{
+    align-items: flex-start;
+  }
+}
+
 .footer__contact > div{
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.5rem;
 }
@@ -1114,7 +1117,14 @@ footer{
 .footer__contact{
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 0.5rem;
+}
+
+@media (min-width: 640px){
+  .footer__contact{
+    align-items: flex-start;
+  }
 }
 
 .footer__headings{
@@ -1129,23 +1139,5 @@ footer{
   .max-sm\:px-4{
     padding-left: 1rem;
     padding-right: 1rem;
-  }
-}
-
-@media (min-width: 640px){
-  .sm\:max-w-\[600px\]{
-    max-width: 600px;
-  }
-}
-
-@media (min-width: 768px){
-  .md\:w-\[800px\]{
-    width: 800px;
-  }
-}
-
-@media (min-width: 1024px){
-  .lg\:max-w-full{
-    max-width: 100%;
   }
 }

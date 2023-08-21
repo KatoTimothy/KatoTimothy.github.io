@@ -94,36 +94,37 @@
   .membership-section {
     @apply w-full;
   }
+  .membership-cards__wrapper {
+    @apply w-full flex flex-col items-center;
+  }
   .membership-cards {
-    @apply w-full grid grid-cols-[repeat(auto-fit,minmax(16rem,1fr))] gap-3 max-sm:justify-items-center;
+    @apply w-full max-w-4xl grid grid-cols-[repeat(auto-fit,minmax(14.375rem,1fr))] gap-4;
   }
   .membership-card {
-    @apply max-sm:w-[18rem] h-96 flex flex-col justify-start bg-gray-700 rounded-lg py-6 items-center gap-y-3;
+    @apply h-96 bg-gray-700 rounded-lg py-6 flex flex-col items-center shrink-0;
   }
-
-  .membership-card__text {
-    @apply text-center flex flex-col items-center justify-center w-full;
+  .membership-card__title-text-wrapper {
+    @apply text-center w-full;
   }
-
-  .membership-card__text > * {
-    @apply w-full;
+  .membership-card__title-text-heading {
+    @apply text-lg font-[700] mb-1 tracking-wide;
   }
-
-  .membership-card__title {
-    @apply text-lg font-extrabold;
+  .membership-card__title-text-price {
+    @apply text-2xl font-[500] pb-3;
   }
-
-  .membership-card__price {
-    @apply font-extrabold pb-3;
+  .membership-card__title-text-separator {
+    @apply border-gray-800;
   }
-
   .membership-card__description-list {
-    @apply grid grid-cols-[auto,1fr] gap-2 px-3;
+    @apply mt-2 px-2;
+  }
+  .membership-card__description-list-item {
+    @apply inline-flex items-center gap-2 mb-2 leading-[130%];
+  }
+  .membership-card__buy-button {
+    @apply p-[0.38rem] bg-[#FAFF00] text-black w-[6.69rem] rounded-full font-semibold mt-auto;
   }
 
-  .membership-card__buy-button {
-    @apply flex justify-center p-[0.38rem] bg-[#FAFF00] text-black w-[6.69rem] rounded-full font-semibold justify-self-end mt-auto;
-  }
   /*======================
    /*---ABOUT US - SECTION---*/
   .about-section {
@@ -154,13 +155,13 @@
     @apply mt-24 w-full mb-9;
   }
   .trainers {
-    @apply grid grid-cols-[repeat(auto-fit,minmax(14.125rem,1fr))] gap-4 max-sm:justify-items-center;
+    @apply grid grid-cols-[repeat(auto-fill,minmax(14.325rem,1fr))] gap-4;
   }
   .trainers__card {
-    @apply flex flex-col items-center bg-gray-700 p-4 rounded-3xl max-sm:w-[18rem];
+    @apply aspect-auto flex flex-col items-center bg-gray-700 p-[1.19rem] rounded-3xl;
   }
   .trainers__profile-image {
-    @apply rounded-3xl aspect-auto w-[14.875rem] object-cover;
+    @apply rounded-3xl object-cover;
   }
   .trainers__name {
     @apply font-[500] text-lg my-4 tracking-wide;
@@ -172,19 +173,20 @@
   /*======================
    /*---TRAINERS STAFF - SECTION---*/
   footer {
-    @apply text-[14px] my-16;
+    @apply text-[14px] my-16 text-center sm:text-left;
   }
   .footer__wrapper {
-    @apply grid grid-cols-[repeat(auto-fit,minmax(12rem,1fr))] max-sm:gap-10 gap-12;
+    /* @apply grid grid-cols-[repeat(auto-fit,minmax(12rem,1fr))] max-sm:gap-10 gap-12; */
+    @apply grid sm:grid-cols-2 md:grid-cols-3  max-sm:gap-10 gap-12;
   }
   .footer__item {
-    @apply flex flex-col gap-4;
+    @apply flex flex-col gap-4 items-center sm:items-start;
   }
   .footer__contact > div {
-    @apply flex gap-2 items-center;
+    @apply inline-flex gap-2 items-center;
   }
   .footer__contact {
-    @apply flex flex-col gap-2;
+    @apply flex flex-col gap-2 items-center sm:items-start;
   }
   .footer__headings {
     @apply text-[1.125rem] tracking-wide font-semibold;
@@ -206,6 +208,6 @@
     @apply flex flex-col flex-nowrap items-center;
   }
   .section-titles {
-    @apply font-medium text-3xl text-center mb-8 md:text-[42px] w-full;
+    @apply font-medium text-3xl text-center mb-[3.12rem] md:text-[42px] w-full;
   }
 }
