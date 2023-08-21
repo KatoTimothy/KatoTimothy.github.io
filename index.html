@@ -12,13 +12,13 @@
 
 <body id="header" class="bg-gray-800 text-white font-normal text-base max-sm:px-4">
   <!-- app wrapper -->
-  <div class="flex-layout">
+  <div class="app-wrapper flex-layout">
     <!-- Hero page wrapper -->
     <div class="page-section hero-section">
       <!-- Hero header section  -->
-      <header class="header-wrapper grid-layout">
+      <header class="header__wrapper">
         <!-- nav menu -->
-        <nav class="header__nav header__nav--mobile grid-row">
+        <nav class="header__nav header__nav--mobile">
           <!-- Logo svg -->
           <a href="#header" class="header__logo">
             <svg width="105" height="17" viewBox="0 0 105 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -62,17 +62,16 @@
         </nav>
       </header>
       <!-- Hero body section -->
-      <div class="hero-page__body">
+      <div class="hero-section__body">
         <h1 class="hero-page__text">Free trial session with a trainer</h1>
         <button class="hero-page__button">Detailed</button>
       </div>
+      <!-- hero background image -->
     </div>
     <!-- main content section  -->
-    <main class="page-section flex-layout">
-      <!-- advantages section -->
+    <main class="page-section flex-layout z-[999]">
       <section id="advantages" class="advantages-section">
         <div class="flex-layout">
-          <!-- Advantages title -->
           <h1 class="section-titles">Reasons to Join</h1>
           <!-- Advantages list -->
           <div class="advantages-list">
@@ -530,19 +529,23 @@
       <!-- about us section -->
       <section id="about" class="about-section">
         <div class="about-section__text-wrapper">
-          <h1 class="section-titles">About us</h1>
-          <p>Gym24 is a leading fitness center located near Grushevka metro station,
-            offering over 1500 sq.m. of space dedicated to top-of-the-line workout equipment from leading brands such as
-            Hammer Strength, Life Fitness,
-            and TechnoGym.
-          <p>With affordable membership options, Gym24 is accessible to everyone who wants to reach their fitness goals,
-            whether it's building strength, increasing endurance, or losing weight.
-          </p>
-          </p>
-          <p>
-            Certified trainers at Gym24 provide expert guidance and support to develop personalized workout plans
-            tailored to each individual's needs and goals.
-          </p>
+          <h1 class="section-titles about-section__title">About us</h1>
+          <div class="about-section__gym-bio">
+            <p>Gym24 is a leading fitness center located near Grushevka metro station,
+              offering over 1500 sq.m. of space dedicated to top-of-the-line workout equipment from leading brands such
+              as
+              Hammer Strength, Life Fitness,
+              and TechnoGym.
+            <p>With affordable membership options, Gym24 is accessible to everyone who wants to reach their fitness
+              goals,
+              whether it's building strength, increasing endurance, or losing weight.
+            </p>
+            </p>
+            <p>
+              Certified trainers at Gym24 provide expert guidance and support to develop personalized workout plans
+              tailored to each individual's needs and goals.
+            </p>
+          </div>
         </div>
         <div class="about-section__images_wrapper">
           <div class="about-section__images">
@@ -880,7 +883,7 @@
         </div>
       </section>
     </main>
-    <!-- footer content -->
+    <!-- footer section -->
     <footer class="page-section">
       <div class="footer__wrapper">
         <div class="footer__item">
@@ -895,12 +898,11 @@
             </svg>
 
           </a>
-          <p class="max-w-[278px]">Build strength and confidence at our gym with state-of-the-art equipment,
+          <p>Build strength and confidence at our gym with state-of-the-art equipment,
             personalized training,
             and a motivating community
           </p>
         </div>
-        <!-- <div></div> -->
         <div class="footer__item">
           <h3 class="footer__headings">Address</h3>
           <p>Republic of Belarus<br />
