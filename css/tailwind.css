@@ -10,41 +10,27 @@
   }
 
   /*--------------------*/
-  /*======= SECTION - HERO ======*/
+  /*======= HERO -SECTION ======*/
 
   .hero-section {
-    @apply lg:min-h-screen mb-16 lg:mb-0;
+    @apply lg:min-h-screen lg:mb-0;
   }
-  /* hero body styles */
-  .hero-page__content {
-    @apply grid grid-cols-4;
-  }
-
+  /* Hero body */
   .hero-page__body {
-    @apply col-span-full;
+    @apply flex flex-col items-center sm:items-start mb-[12.5rem];
   }
-
   .hero-page__text {
     @apply text-5xl md:max-w-[75%] md:text-7xl lg:text-8xl text-center font-sans mt-16 font-medium sm:text-left;
   }
-
-  .hero-page__button-wrapper {
-    @apply flex justify-center my-24 sm:justify-start;
-  }
-
   .hero-page__button {
-    @apply text-lg text-black bg-[#FAFF00] w-[12rem] py-[1.75rem] px-[3.29rem] rounded-full font-semibold h-[3rem] flex items-center justify-center;
+    @apply text-lg text-black bg-[#FAFF00] w-[12rem] py-[1.75rem] px-[3.29rem] mt-24 sm:mt-14 rounded-full font-semibold h-[3rem] flex items-center justify-center;
   }
 
-  /*--------------------*/
-  /*======= HEADER -SECTION ======*/
+  /* Hero navigation */
 
-  /* lOGO */
   .header-logo {
     @apply m-0 p-0;
   }
-
-  /* NAVIGATION */
   .header__nav {
     @apply flex justify-between items-center h-[80px];
   }

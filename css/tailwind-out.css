@@ -656,11 +656,7 @@ html{
 
 /*--------------------*/
 
-/*======= SECTION - HERO ======*/
-
-.hero-section{
-  margin-bottom: 4rem;
-}
+/*======= HERO -SECTION ======*/
 
 @media (min-width: 1024px){
   .hero-section{
@@ -669,10 +665,19 @@ html{
   }
 }
 
-/* hero body styles */
+/* Hero body */
 
 .hero-page__body{
-  grid-column: 1 / -1;
+  margin-bottom: 12.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 640px){
+  .hero-page__body{
+    align-items: flex-start;
+  }
 }
 
 .hero-page__text{
@@ -705,20 +710,8 @@ html{
   }
 }
 
-.hero-page__button-wrapper{
-  margin-top: 6rem;
-  margin-bottom: 6rem;
-  display: flex;
-  justify-content: center;
-}
-
-@media (min-width: 640px){
-  .hero-page__button-wrapper{
-    justify-content: flex-start;
-  }
-}
-
 .hero-page__button{
+  margin-top: 6rem;
   display: flex;
   height: 3rem;
   width: 12rem;
@@ -738,13 +731,13 @@ html{
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
-/*--------------------*/
+@media (min-width: 640px){
+  .hero-page__button{
+    margin-top: 3.5rem;
+  }
+}
 
-/*======= HEADER -SECTION ======*/
-
-/* lOGO */
-
-/* NAVIGATION */
+/* Hero navigation */
 
 .header__nav{
   display: flex;
