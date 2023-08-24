@@ -78,7 +78,7 @@
     @apply w-full flex flex-col items-center;
   }
   .membership-cards {
-    @apply w-full max-w-4xl grid grid-cols-[repeat(auto-fit,minmax(14.375rem,1fr))] gap-4;
+    @apply max-sm:max-w-[18rem] w-full max-w-4xl grid grid-cols-[repeat(auto-fit,minmax(14.375rem,1fr))] gap-4;
   }
   .membership-card {
     @apply h-96 bg-gray-700 rounded-lg py-6 flex flex-col items-center shrink-0;
@@ -135,7 +135,7 @@
     @apply mt-24 w-full mb-9;
   }
   .trainers {
-    @apply grid grid-cols-[repeat(auto-fill,minmax(14.325rem,1fr))] gap-4;
+    @apply max-sm:max-w-[18rem] grid grid-cols-[repeat(auto-fill,minmax(14.325rem,1fr))] gap-4;
   }
   .trainers__card {
     @apply aspect-auto flex flex-col items-center bg-gray-700 p-[1.19rem] rounded-3xl;

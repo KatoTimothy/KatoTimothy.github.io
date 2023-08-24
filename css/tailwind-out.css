@@ -866,6 +866,12 @@ html{
   gap: 1rem;
 }
 
+@media not all and (min-width: 640px){
+  .membership-cards{
+    max-width: 18rem;
+  }
+}
+
 .membership-card{
   display: flex;
   height: 24rem;
@@ -1008,6 +1014,12 @@ html{
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(14.325rem,1fr));
   gap: 1rem;
+}
+
+@media not all and (min-width: 640px){
+  .trainers{
+    max-width: 18rem;
+  }
 }
 
 .trainers__card{
