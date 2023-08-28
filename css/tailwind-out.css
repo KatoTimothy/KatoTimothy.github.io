@@ -855,7 +855,7 @@ div.membership-cards__wrapper--mobile{
   padding-bottom: 2.5rem;
 }
 
-@media (min-width: 640px){
+@media (min-width: 1024px){
   div.membership-cards__wrapper--mobile{
     display: none;
   }
@@ -868,7 +868,7 @@ div.membership-cards__wrapper--mobile{
   align-items: center;
 }
 
-@media (min-width: 640px){
+@media (min-width: 1024px){
   .membership-cards__wrapper--desktop{
     display: flex;
   }

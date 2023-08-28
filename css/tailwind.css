@@ -75,10 +75,10 @@
     @apply w-full;
   }
   div.membership-cards__wrapper--mobile {
-    @apply w-full flex flex-col items-center sm:hidden pb-10;
+    @apply w-full flex flex-col items-center lg:hidden pb-10;
   }
   .membership-cards__wrapper--desktop {
-    @apply w-full hidden sm:flex flex-col items-center;
+    @apply w-full hidden lg:flex flex-col items-center;
   }
   .membership-cards {
     @apply max-sm:max-w-[18rem] w-full max-w-4xl grid grid-cols-[repeat(auto-fit,minmax(15rem,1fr))] gap-4;
