@@ -74,14 +74,18 @@
   .membership-section {
     @apply w-full;
   }
-  .membership-cards__wrapper {
-    @apply w-full flex flex-col items-center;
+  div.membership-cards__wrapper--mobile {
+    @apply w-full flex flex-col items-center sm:hidden pb-10;
+  }
+  .membership-cards__wrapper--desktop {
+    @apply w-full hidden sm:flex flex-col items-center;
   }
   .membership-cards {
-    @apply max-sm:max-w-[18rem] w-full max-w-4xl grid grid-cols-[repeat(auto-fit,minmax(14.375rem,1fr))] gap-4;
+    @apply max-sm:max-w-[18rem] w-full max-w-4xl grid grid-cols-[repeat(auto-fit,minmax(15rem,1fr))] gap-4;
   }
+
   .membership-card {
-    @apply h-96 bg-gray-700 rounded-lg py-6 flex flex-col items-center shrink-0;
+    @apply w-full h-96 bg-gray-700 rounded-lg py-6 flex flex-col items-center shrink-0;
   }
   .membership-card__title-text-wrapper {
     @apply text-center w-full;
@@ -96,13 +100,23 @@
     @apply border-gray-800;
   }
   .membership-card__description-list {
-    @apply mt-2 px-2;
+    @apply mt-2 px-2 flex flex-col items-center;
   }
   .membership-card__description-list-item {
-    @apply inline-flex items-center gap-2 mb-2 leading-[130%];
+    @apply w-full inline-flex items-center gap-2 mb-2 leading-[130%];
   }
   .membership-card__buy-button {
     @apply p-[0.38rem] bg-[#FAFF00] text-black w-[6.69rem] rounded-full font-semibold mt-auto;
+  }
+
+  /* Membership swiper */
+  div.membership-cards__wrapper--mobile .swiper-slide {
+    @apply basis-72;
+  }
+
+  .membership-section .swiper-pagination-bullet {
+    /* @apply bg-[#FAFF00]; */
+    @apply bg-white;
   }
 
   /*======================

@@ -540,10 +540,6 @@ html{
   --tw-backdrop-sepia:  ;
 }
 
-.z-\[999\]{
-  z-index: 999;
-}
-
 .max-w-\[278px\]{
   max-width: 278px;
 }
@@ -851,18 +847,38 @@ html{
   width: 100%;
 }
 
-.membership-cards__wrapper{
+div.membership-cards__wrapper--mobile{
   display: flex;
   width: 100%;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 2.5rem;
+}
+
+@media (min-width: 640px){
+  div.membership-cards__wrapper--mobile{
+    display: none;
+  }
+}
+
+.membership-cards__wrapper--desktop{
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 640px){
+  .membership-cards__wrapper--desktop{
+    display: flex;
+  }
 }
 
 .membership-cards{
   display: grid;
   width: 100%;
   max-width: 56rem;
-  grid-template-columns: repeat(auto-fit,minmax(14.375rem,1fr));
+  grid-template-columns: repeat(auto-fit,minmax(15rem,1fr));
   gap: 1rem;
 }
 
@@ -875,6 +891,7 @@ html{
 .membership-card{
   display: flex;
   height: 24rem;
+  width: 100%;
   flex-shrink: 0;
   flex-direction: column;
   align-items: center;
@@ -912,6 +929,9 @@ html{
 
 .membership-card__description-list{
   margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
@@ -919,6 +939,7 @@ html{
 .membership-card__description-list-item{
   margin-bottom: 0.5rem;
   display: inline-flex;
+  width: 100%;
   align-items: center;
   gap: 0.5rem;
   line-height: 130%;
@@ -934,6 +955,18 @@ html{
   font-weight: 600;
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+/* Membership swiper */
+
+div.membership-cards__wrapper--mobile .swiper-slide{
+  flex-basis: 18rem;
+}
+
+.membership-section .swiper-pagination-bullet {
+  /* @apply bg-[#FAFF00]; */
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 /*======================
