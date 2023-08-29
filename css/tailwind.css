@@ -83,7 +83,6 @@
   .membership-cards {
     @apply max-sm:max-w-[18rem] w-full max-w-4xl grid grid-cols-[repeat(auto-fit,minmax(15rem,1fr))] gap-4;
   }
-
   .membership-card {
     @apply w-full h-96 bg-gray-700 rounded-lg py-6 flex flex-col items-center shrink-0;
   }
@@ -91,7 +90,7 @@
     @apply text-center w-full;
   }
   .membership-card__title-text-heading {
-    @apply text-lg font-[700] mb-1 tracking-wide;
+    @apply text-lg font-[700] tracking-wide mb-[-0.3rem];
   }
   .membership-card__title-text-price {
     @apply text-2xl font-[500] pb-3;

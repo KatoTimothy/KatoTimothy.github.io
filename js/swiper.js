@@ -18,5 +18,11 @@ import { Pagination, Navigation } from "swiper/modules";
       el: ".swiper-pagination",
       clickable: true,
     },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        centeredSlides: false,
+      },
+    },
   });
 })();
